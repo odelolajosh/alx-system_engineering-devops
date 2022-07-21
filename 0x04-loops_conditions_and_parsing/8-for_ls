@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Display the content of the current directory
+for name in `ls`
+do
+	echo $name
+done
+
