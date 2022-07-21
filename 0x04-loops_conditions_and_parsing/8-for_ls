@@ -2,6 +2,6 @@
 # Display the content of the current directory
 for name in *
 do
-	echo "$name" | cut -f 2- -d '-'	# 2- means from the 2nth field to the last field
+	echo "$name" | cut -f 2- -d '-' # 2- means from 2nd field to last field
 done
 
