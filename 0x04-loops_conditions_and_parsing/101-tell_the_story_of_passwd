@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# displays the content of the file /etc/passwd
-while read -r line
+# Displays the content of the file /etc/passwd, using the while loop + IFS
+while IFS= read -r line
 do
 	username=$(echo "$line" | cut -f 1 -d ":")
 	groupId=$(echo "$line" | cut -f 5 -d ":")
