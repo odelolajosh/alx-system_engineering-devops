@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-# Print Best School 10 times using while loop
+# displays numbers from 1 to 20 and add their superstitous meaning
 i=1
 while [ $i -le 20 ]
 do
-	echo $i
-	case $i in
-		4)
-			echo "bad luck from Japan"	# print on 4th iteration
-			;;
-		9)
-			echo "bad luck from China"	# print on the 9th iteration
-			;;
-		17)
-			echo "bad luck from Italy"	# print on the 17th iteration
-			;;
-	esac
-	(( i++ ))
+    echo $i
+    case $i in
+	4)
+	    echo "bad luck from China"
+	    ;;
+	9)
+	    echo "bad luck from Japan"
+	    ;;
+	17)
+	    echo "bad luck from Italy"
+	    ;;
+    esac
+    (( i++ ))
 done
 
