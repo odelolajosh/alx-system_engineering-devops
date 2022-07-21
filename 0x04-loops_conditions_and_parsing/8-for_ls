@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Display the content of the current directory
-for name in `ls`
+for name in *
 do
-	echo $name
+	echo "$name" | cut -f 2- -d '-'	# 2- means from the 2nth field to the last field
 done
 
