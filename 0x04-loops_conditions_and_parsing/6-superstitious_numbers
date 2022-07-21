@@ -4,16 +4,16 @@ i=1
 while [ $i -le 20 ]
 do
 	echo $i
-	if [ $i -eq 4 ]
-	then
-		echo "bad luck from Japan"	# print on 4th iteration
-	elif [ $i -eq 9 ]
-	then
-		echo "bad luck from China"	# print on the 9th iteration
-	elif [ $i -eq 17 ]
-	then
-		echo "bad luck from Italy"	# print on the 17th iteration
-	fi
-	((i += 1))				# increments i. Same as i=$(( i + 1 ))
+	case $i in
+		4)
+			echo "bad luck from Japan"	# print on 4th iteration
+			;;
+		9)
+			echo "bad luck from China"	# print on the 9th iteration
+			;;
+		17)
+			echo "bad luck from Italy"	# print on the 17th iteration
+	esac
+	((i += 1))
 done
 
