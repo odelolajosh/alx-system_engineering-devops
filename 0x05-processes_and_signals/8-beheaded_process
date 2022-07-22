@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Stops 7-highlander process
-pkill -TERM -f 7-highlander
+pkill -KILL -f 7-highlander
 
