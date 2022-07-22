@@ -2,13 +2,13 @@
 # handles signals
 
 # Display "I hate the kill command" when receiving a SIGTERM signal
-trap 'echo "I hate the kill command"' TERM
+trap 'echo "I hate the kill command; rm -f /var/run/myscript.pid; exit 0"' TERM
 
 # Display "Y U no love me?!" when receiving a SIGINT signal
 trap 'echo "Y U no love me?!"' INT
 
 # Deletes the file /var/run/myscript.pid and terminates
-trap 'rm /var/run/myscript.pid; exit 0' QUIT TERM
+trap 'rm -f /var/run/myscript.pid; exit 0' QUIT
 
 echo $$ > /var/run/myscript.pid
 
