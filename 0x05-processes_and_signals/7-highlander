@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays a message when terminated
+trap "echo I am invincible!!!; exit" SIGTERM SIGINT
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
+
