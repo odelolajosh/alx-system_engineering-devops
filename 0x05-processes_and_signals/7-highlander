@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Displays a message when terminated
-trap "echo I am invincible!!!; exit" SIGTERM SIGINT
+trap "echo I am invincible!!!" SIGTERM
 while true
 do
 	echo "To infinity and beyond"
