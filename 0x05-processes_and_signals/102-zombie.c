@@ -1,6 +1,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * infinite_while - sleep for life
@@ -23,10 +24,17 @@ int infinite_while(void)
 int main(void)
 {
 	int i;
+	pid_t pid;
 
 	for (i = 0; i < 5; i++)
 	{
-		if (fork() == 0)
+		pid = fork();
+		if (pid < 0)
+		{
+			perror("fork");
+			exit(1);
+		}
+		if (pid == 0)
 		{
 			printf("Zombie process created, PID: %d\n", getpid());
 			return (0);
