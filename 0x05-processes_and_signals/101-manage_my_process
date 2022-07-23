@@ -2,6 +2,7 @@
 # Manages the manage_my_process
 
 # Source function library
+# shellcheck disable=SC1091
 . /lib/lsb/init-functions
 
 process='./manage_my_process'
