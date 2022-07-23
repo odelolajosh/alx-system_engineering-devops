@@ -15,7 +15,7 @@ start() {
 
 # Stops the process
 stop () {
-	kill -TERM $(cat $output)
+	kill -TERM "$(cat $output)"
 	rm -f $output
 }
 
