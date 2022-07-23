@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Manages the manage_my_process
+
+# Source function library
+. /lib/lsb/init-functions
+
+process='./manage_my_process'
+output=/var/run/my_process.pid
+
+# Starts the process
+start() {
+	$process &
+	echo $! > $output
+}
+
+# Stops the process
+stop () {
+	kill -TERM $(cat $output)
+	rm -f $output
+}
+
+case "$1" in
+	start)
+		start
+		echo "manage_my_process started"
+		;;
+	stop)
+		stop
+		echo "manage_my_process stopped"
+		;;
+	restart)
+		stop
+		start
+		echo "manage_my_process restarted"
+		;;
+	*)
+		echo "Usage: manage_my_process {start|stop|restart}"
+		exit 1
+		;;
+esac
+exit $?
+
