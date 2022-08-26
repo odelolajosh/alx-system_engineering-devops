@@ -1,4 +1,17 @@
 https://drive.google.com/file/d/1050BS1ufa0GS-vYUTRCFBqCvFUqw84q2/view?usp=sharing
 
-1. Server is a dedicated computer hosted on a networking, responding to requests.
-2. 
+- Server is a dedicated computer hosted on a networking, responding to requests.
+- The domain name reference the ip address of the server.
+- www in www.foobar.com is a CNAME record for foobar.com
+- The web server hosts and serves web content.
+- The application server handles and responds to business logic requests.
+- The role of the database is to persist data throughout the architecture.
+- The server uses HTTP to communicate with the client.
+
+Issues
+- SPOF (Single Point of Failure):
+	The whole architecture is dependent on the server and a single failure in any of the server components will cause total failure.
+- Downtime when maintenance is needed:
+	During maintenance, the whole app is in halt due to a single server.
+- Cannot scale if to much incoming traffic:
+	This web architecture cannot withstand high traffic due to the presence of a single server. 
