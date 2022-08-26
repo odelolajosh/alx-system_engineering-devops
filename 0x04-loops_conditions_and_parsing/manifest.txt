@@ -1,0 +1,13 @@
+SHA256:AR8XZA0d+sg+rv9C35WCj8B42eZ/dS8txjH4FWbNobs odelolajosh@DESKTOP-R8BQAFF
+The key's randomart image is:
++---[RSA 3072]----+
+|      . ..*=..   |
+|       o + .o  . |
+|        o .   ..o|
+|         o o . +o|
+|        S = o.+ o|
+|       . *.+.oo.=|
+|        ..*.o+o*+|
+|         ..+.EB.o|
+|        .ooooo.o |
++----[SHA256]-----+

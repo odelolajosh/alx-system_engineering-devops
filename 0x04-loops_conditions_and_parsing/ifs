@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays the content of the file /etc/passwd, using the while loop + IFS
+echo " this   is a test " | while IFS= read -r line; do echo "=$line=" ; done
+echo " this   is a test " | while read -r line; do echo "=$line=" ; done
