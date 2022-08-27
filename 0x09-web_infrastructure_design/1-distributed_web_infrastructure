@@ -1,2 +1,17 @@
 https://drive.google.com/file/d/1HgJ5XBbi5FRpH18tk5Vncl5jHbeDTKCt/view?usp=sharing
 
+- An additional replica server is added to improve scalablitity and invulnerability to high traffic. This is achieved by connecting the master and replica servers to the HAproxy load balancer.
+
+- The load balancer works with the weighted least connection algorithm so that requests are directed to the server with least ammount of concurrent connections.
+
+- The load balancer enables Active-Active setup so that both of the server are actively receiving and responding to request. Active-Passive setup makes the replica server a fallback server.
+
+- A database Primary-Replica (Master-Slave) cluster has a slave server that becomes active when the master server is down due to crash or maintenance.
+
+Issues
+- SPOFs
+	SPOF is spotted in the load balancer. The load balancer can fail and cause downtime in the overall application.
+
+- The infrastructure is vulnerable to cyber attacks due to absence of Firewalls/security to filter requests coming in from the pulic network to the private networks.
+
+- The infrastructure lacks monitoring,a means to get metrics of the server performance and cpu, disk status.
