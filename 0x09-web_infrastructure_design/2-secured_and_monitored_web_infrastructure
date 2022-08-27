@@ -1,2 +1,9 @@
 https://drive.google.com/file/d/10nE5FMc59Lv1NSmg5ATD6Hj9MT9_yAZA/view?usp=sharing
 
+- Added SSL Certificates for encryption of http requests and responses, Firewalls to the load balancer and individual servers for filtering incoming traffic from the public network to private network and monitoring service, Datadog MC, to record metrics on the status of the server.
+
+- The Firewalls are needed to filter incoming traffic to a server from the public network to private network.
+
+- The traffic is served over HTTPS to ensure securing of confidential data passed as requests or responses.
+
+- Monitoring is used to collect data about the health of the server relating to CPU, Disk and other areas. So it'll easy to prevent potential issues.
