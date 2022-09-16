@@ -3,6 +3,6 @@
 package { 'pkill killmenow':
   path     => '/usr/bin',
   command  => 'pkill killmenow',
-  provider => 'shell',
+  provider => shell,
   return   => [0, 1]
 }
