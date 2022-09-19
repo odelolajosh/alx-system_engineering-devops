@@ -9,5 +9,5 @@ else
 	IP=$2
 	USER=$3
 
-	scp -i $SSH_KEY $FILE $USER@$IP:~/.
+	scp -i "$SSH_KEY" "$FILE" "$USER"@"$IP":~/.
 fi
