@@ -3,5 +3,5 @@
 apt-get update
 apt-get install -y nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sed -i "/server_name _;/a \\\treturn 301 https://github.com/odelolajosh;" nginx.conf
+sed -i "/server_name _;/a \\\treturn 301 https://github.com/odelolajosh;" /etc/nginx/site-available/default
 service nginx restart
