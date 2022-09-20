@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script is used to fix the issue of apache2 serving content
+# It turns out that the issue is that apache2 is not started
+# This script will start apache2 and then restart it
+# check if apache2 is running
+# service apache2 status
+service apache2 start
