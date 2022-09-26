@@ -11,8 +11,8 @@ echo -e "frontend http-in" >> /etc/haproxy/haproxy.cfg
 echo -e "\tbind *:80" >> /etc/haproxy/haproxy.cfg
 echo -e "\tmode http" >> /etc/haproxy/haproxy.cfg
 echo -e "\tdefault_backend servers" >> /etc/haproxy/haproxy.cfg
-
 echo -e "\nbackend servers" >> /etc/haproxy/haproxy.cfg
 echo -e "\tbalance roundrobin" >> /etc/haproxy/haproxy.cfg
-echo -e "\tserver 11178-web-01 18.206.92.141 check" >> /etc/haproxy/haproxy.cfg
-echo -e "\tserver 11178-web-02 44.192.79.41 check" >> /etc/haproxy/haproxy.cfg
+echo -e "\tserver 11178-web-01 18.206.92.141:80 check" >> /etc/haproxy/haproxy.cfg
+echo -e "\tserver 11178-web-02 44.192.79.41:80 check" >> /etc/haproxy/haproxy.cfg
+service haproxy start
