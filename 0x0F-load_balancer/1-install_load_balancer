@@ -15,4 +15,4 @@ echo -e "\nbackend servers" >> /etc/haproxy/haproxy.cfg
 echo -e "\tbalance roundrobin" >> /etc/haproxy/haproxy.cfg
 echo -e "\tserver 11178-web-01 18.206.92.141:80 check" >> /etc/haproxy/haproxy.cfg
 echo -e "\tserver 11178-web-02 44.192.79.41:80 check" >> /etc/haproxy/haproxy.cfg
-service haproxy start
+service haproxy restart
