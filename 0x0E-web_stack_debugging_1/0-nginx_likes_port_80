@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Debug a web server
+# run `nginx -t` to check config files, all is well
+# do this becuase sites-enabled/default points to port 8080
+# configuration in sites-available/default seems alright
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx start
