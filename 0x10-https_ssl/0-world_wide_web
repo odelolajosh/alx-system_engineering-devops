@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Script that will display information about subdomains
+
+DOMAIN=$1
+SUB_DOMAINS="www lb-01 web-01 web-02"
+
+# if argument is passed
+if [ "$2" ]
+then
+	SUB_DOMAINS=$2
+fi
+
+for sub in $SUB_DOMAINS
+do
+	answer="$(dig "$sub"."$DOMAIN" | grep -A1 'ANSWER SECTION:' | tail -n 1)"
+	ip="$(echo "$answer" | tr ' ' '\t' | cut -f 5)"
+	record="$(echo "$answer" | tr ' ' '\t' | cut -f 4)"
+	echo "The subdomain $sub is a $record record and points to $ip"
+done
+
