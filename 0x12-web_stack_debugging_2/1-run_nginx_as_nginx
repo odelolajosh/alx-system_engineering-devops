@@ -2,5 +2,5 @@
 # Scripts that restarts nginx as nginx user
 sed -i 's/#user www-data;/user nginx;/' /etc/nginx/nginx.conf
 sed -i 's/80 /8080 /g' /etc/nginx/sites-available/default
-kill -9 -1
+pkill -9 apache
 sudo service nginx restart
