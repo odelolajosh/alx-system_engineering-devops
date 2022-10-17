@@ -17,7 +17,7 @@ if __name__ == "__main__":
         number_of_done_tasks = 0
         titles = []
         employee = request.get(url + "users/{}".format(employee_id)).json()
-        employee_name = employee.get("name")
+        employee_name = employee.get("username")
         params = {"userId": employee_id}
         tasks = request.get(url + "todos", params=params).json()
 
