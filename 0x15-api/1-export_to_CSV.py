@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ export TODO list progress for a given employee ID into a CSV file. """
+import csv
 import requests as request
 import sys
-import csv
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
