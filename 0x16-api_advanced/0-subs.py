@@ -5,9 +5,6 @@ This script queries the Reddit API and returns the number of subscribers
 """
 import requests
 
-# disable requests warnings
-requests.packages.urllib3.disable_warnings()
-
 
 def number_of_subscribers(subreddit):
     """
