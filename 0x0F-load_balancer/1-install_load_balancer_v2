@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+{
+	echo -e "# HAproxy for web servers"
+	echo -e "frontend http-in"
+	echo -e "\tbind *:80"
+	echo -e "\tmode http"
+	echo -e "\tdefault_backend servers"
+	echo -e "\nbackend servers"
+	echo -e "\tbalance roundrobin"
+	echo -e "\tserver 11178-web-01 18.206.92.141:80 check"
+	echo -e "\tserver 11178-web-02 44.192.79.41:80 check"
+} >> test
