@@ -4,9 +4,6 @@ This script queries the Reddit API
 """
 import requests
 
-# disable requests warnings
-requests.packages.urllib3.disable_warnings()
-
 
 def recurse(subreddit, hot_list=[], after=None):
     """
