@@ -1,0 +1,29 @@
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /var/www/html;
+
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name odelolajosh.tech www.odelolajosh.tech;
+
+        add_header X-Served-By 11178-web-01;
+
+        error_page 404 /404.html;
+
+        location /hbnb_static {
+                alias /data/web_static/current/;
+                autoindex off;
+        }
+
+        location /redirect_me {
+                return 301 https://github.com/odelolajosh;
+        }
+
+        location / {
+                include proxy_params;
+                proxy_pass http://0.0.0.0:5000;
+        }
+}
+
